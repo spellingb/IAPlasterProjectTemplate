@@ -158,6 +158,7 @@ Add-Buildtask ShowInfo {
     Write-Build Gray
 }
 
+#Synopsis: Compile Local Build
 Add-BuildTask LocalBuild GetVersion, PesterTests, UpdateDocs, {
 	#Create New Build folder
 	$null = New-Item -Path "$env:BHBuildOutput\$env:BHProjectName\$env:NextBuildVersion" -ItemType Directory
